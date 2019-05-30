@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no"
+    />
+    <meta name="keywords" content="Semantic-UI, Theme, Design, Template" />
+    <meta name="author" content="PPType" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>h1r3m3</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+      type="text/css"
+    />
+    <style type="text/css">
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: grayscale;
+        background-color: #92afaf;
+
+      }
+
+      .ui.center.aligned.container {
+        margin-top: 4em;
+      }
+
+      p.lead {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1.3em;
+        color: #333333;
+        line-height: 1.4;
+        font-weight: 300;
+      }
+
+      .ui.huge.header {
+        font-size: 36px;
+      }
+
+      .ui.inverted.menu {
+        border-radius: 0;
+        flex-wrap: wrap;
+        border: none;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .ui.mobile.only.grid .ui.menu .ui.vertical.menu {
+        display: none;
+      }
+
+      .ui.inverted.menu .item {
+        color: rgb(157, 157, 157);
+        font-size: 16px;
+      }
+
+      .ui.inverted.menu .active.item {
+        background-color: #080808;
+      }
+      .ui.center.aligned.segment{
+        display: none;
+      }
+      /* .ui.raised.very.padded.text.teal.container.inverted.segment{
+        display: none;
+
+      } */
+
+    </style>
+  </head>
+
+  <body id="root">
+    <div class="ui tablet computer only padded grid">
+      <div class="ui borderless fluid huge inverted menu">
+        <div class="ui container">
+          <a class="header item" href="#root">h1r3m3</a>
+          <a class="active item" href="#root">Login</a>
+          <!-- <a class="item" href="#root">Create Applicant</a>
+          <a class="item" href="#root">Contact</a> -->
+        </div>
+
+      </div>
+    </div>
+    <div class="ui mobile only padded grid">
+      <div class="ui borderless fluid huge inverted menu">
+        <a class="header item" href="#root">h1r3m3</a>
+        <div class="right menu">
+          <div class="item">
+            <button class="ui icon toggle basic inverted button">
+              <i class="content icon"></i>
+            </button>
+          </div>
+        </div>
+        <div class="ui vertical borderless fluid inverted menu">
+          <a class="active item" href="#root">h1r3m3</a>
+          <a class="item" href="#root">Login</a>
+          <a class="item" href="#root">Contact</a>
+        </div>
+      </div>
+    </div>
+    <!-- form -->
+
+    <div class="ui center aligned segment">
+           <form class=" ui inverted segment form" >
+             <h3>Create a new Applicant!</h3>
+             <div class="two fields">
+                  <div class="field">
+                    <label>First Name</label>
+                    <input type="text" name="fname" value="" placeholder="Enter applicant first name..." class="input-text">
+                    </div>
+                 <br>
+                 <div class="field">
+                   <label>Last Name</label>
+                 <input type="text" name="lname" value="" placeholder="Enter applicant last name..." class="input-text">
+                   </div>
+                 <br>
+            </div>
+            <div class="two fields">
+                 <div class="field">
+                   <label>Email</label>
+                 <input type="text" name="email" value="" placeholder="Enter applicant email..." class="input-text">
+                   </div>
+                 <br><div class="field">
+                   <label>Phone Number</label>
+                 <input type="text" name="phone_number" value="" placeholder="Enter applicant phone number..." class="input-text">
+                   </div>
+                 <br>
+             </div>
+
+             <input type="submit" name="submit" value="Create a new Applicant" class="ui submit button">
+           </form>
+         </div>
+    <!-- end of form -->
+
+    <div class="ui center aligned  container">
+      <h1 class="ui huge header">Applicants <small>  <button id='new-applicant-btn'> Create A new Applicant</button> </small> </h1>
+
+        <table class="ui table">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <!-- <th>Phone Number</th> -->
+                    <th>Stage</th>
+                    <th>Comment</th>
+                    <th>Completed</th>
+                    <th>Date</th>
+                    <!-- <th>Time</th> -->
+                    <!-- <th>Duration</th> -->
+                    <th>Email Sent?</th>
+                    <!-- <th>Location</th> -->
+                    <th>Outcome</th>
+                    <th>    </th>
+                </tr>
+            </thead>
+          <tbody id="body">
+
+          </tbody>
+        </table>
+
+
+
+    </div>
+
+    <div class="ui raised very padded text teal container inverted segment">
+      <form class="update-form">
+        <label for="">Outcome</label>
+        <input id="passed" type="checkbox" name="outcome" value="">
+          <label for="">Stage complete?</label>
+          <input id="completed" type="checkbox" name="completed" value="">
+        <label for="">Comments</label>
+          <input type="text" name="comment" value="">
+          <input id="update" type="submit" name="submit" value="Complete Stage" class="ui submit button">
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".ui.toggle.button").click(function() {
+          $(".mobile.only.grid .ui.vertical.menu").toggle(100);
+        });
+      });
+    </script>
+    <script type="text/javascript" src='src/index.js'></script>
+  </body>
+</html>

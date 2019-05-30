@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cv_screening: MyString
+  phone_interview: MyString
+  face_to_face_interview: MyString
+  hr_meeting: MyString
+
+two:
+  cv_screening: MyString
+  phone_interview: MyString
+  face_to_face_interview: MyString
+  hr_meeting: MyString

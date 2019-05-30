@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  applicant: one
+  stage: one
+  date: 2019-03-04
+  time: 2019-03-04 18:21:05
+  duration: 1.5
+  completed: false
+  outcome: false
+  email_sent: false
+  comment: MyText
+  location: MyString
+
+two:
+  applicant: two
+  stage: two
+  date: 2019-03-04
+  time: 2019-03-04 18:21:05
+  duration: 1.5
+  completed: false
+  outcome: false
+  email_sent: false
+  comment: MyText
+  location: MyString
